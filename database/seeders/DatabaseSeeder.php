@@ -18,18 +18,15 @@ class DatabaseSeeder extends Seeder
         $this->call(NotificationSeeder::class);
         Artisan::call('module:migrate LandingPage');
         Artisan::call('module:seed LandingPage');
-
-        if(!file_exists(storage_path() . "/installed"))
-        {
+ 
             $this->call(PlansTableSeeder::class);
             $this->call(UsersTableSeeder::class);
             $this->call(AiTemplateSeeder::class);
-            $this->call(TenantSeeder::class);
-
-        }else{
+            //$this->call(TenantSeeder::class);
+ 
             Utility::languagecreate();
 
-        }
+         
     }
 	
 }
