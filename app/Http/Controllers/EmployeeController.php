@@ -722,7 +722,8 @@ class EmployeeController extends Controller
     public function export()
     {
         $name = 'employee_' . date('Y-m-d i:h:s');
-        $data = Excel::download(new EmployeeExport(), $name . '.xlsx'); ob_end_clean();
+        $data = Excel::download(new EmployeeExport(), $name . '.xlsx');
+        //ob_end_clean();
 
         return $data;
     }

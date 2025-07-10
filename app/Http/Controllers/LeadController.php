@@ -1782,7 +1782,8 @@ class LeadController extends Controller
     public function export()
     {
         $name = 'Lead_' . date('Y-m-d i:h:s');
-        $data = Excel::download(new LeadExport(), $name . '.xlsx'); ob_end_clean();
+        $data = Excel::download(new LeadExport(), $name . '.xlsx');
+        //ob_end_clean();
 
         return $data;
     }

@@ -2074,7 +2074,8 @@ class DealController extends Controller
     public function export()
     {
         $name = 'Deal_' . date('Y-m-d i:h:s');
-        $data = Excel::download(new DealExport(), $name . '.xlsx'); ob_end_clean();
+        $data = Excel::download(new DealExport(), $name . '.xlsx');
+        //ob_end_clean();
 
         return $data;
     }
