@@ -1205,7 +1205,7 @@ class InvoiceController extends Controller
     {
         $name = 'invoice_' . date('Y-m-d i:h:s');
         $data = Excel::download(new InvoiceExport(), $name . '.xlsx');
-        ob_end_clean();
+        //ob_end_clean();
 
         return $data;
     }

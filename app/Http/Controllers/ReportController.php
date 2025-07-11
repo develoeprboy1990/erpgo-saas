@@ -3902,7 +3902,7 @@ class ReportController extends Controller
 
         $name = 'trial_balance_' . date('Y-m-d i:h:s');
         $data = Excel::download(new TrialBalancExport($totalAccounts, $start, $end, $companyName), $name . '.xlsx');
-        ob_end_clean();
+        //ob_end_clean();
 
         return $data;
     }
@@ -4151,7 +4151,7 @@ class ReportController extends Controller
 
         $name = 'balance_sheet_' . date('Y-m-d i:h:s');
         $data = Excel::download(new BalanceSheetExport($totalAccounts, $start, $end, $companyName), $name . '.xlsx');
-        ob_end_clean();
+        //ob_end_clean();
 
         return $data;
 
@@ -4377,7 +4377,7 @@ class ReportController extends Controller
 
             $name = 'profit & loss_' . date('Y-m-d i:h:s');
             $data = Excel::download(new ProfitLossExport($totalAccounts, $start, $end, $companyName), $name . '.xlsx');
-            ob_end_clean();
+            //ob_end_clean();
 
             return $data;
         } else {
@@ -4501,7 +4501,7 @@ class ReportController extends Controller
 
         $name = 'Sales By ' . $reportName . '_ ' . date('Y-m-d i:h:s');
         $data = Excel::download(new SalesReportExport($invoiceItems, $start, $end, $companyName, $reportName), $name . '.xlsx');
-        ob_end_clean();
+        //ob_end_clean();
 
         return $data;
 
@@ -4778,7 +4778,7 @@ class ReportController extends Controller
 
         $name = 'Receivable Report_ ' . date('Y-m-d i:h:s');
         $data = Excel::download(new ReceivableExport($receivableCustomers, $start, $end, $companyName), $name . '.xlsx');
-        ob_end_clean();
+        //ob_end_clean();
 
         return $data;
     }

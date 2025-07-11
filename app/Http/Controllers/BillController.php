@@ -1545,7 +1545,8 @@ class BillController extends Controller
     public function export()
     {
         $name = 'bill_' . date('Y-m-d i:h:s');
-        $data = Excel::download(new BillExport(), $name . '.xlsx'); ob_end_clean();
+        $data = Excel::download(new BillExport(), $name . '.xlsx');
+        //ob_end_clean();
 
         return $data;
     }

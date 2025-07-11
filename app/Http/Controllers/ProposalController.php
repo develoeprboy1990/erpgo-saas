@@ -958,7 +958,8 @@ class ProposalController extends Controller
     public function export()
     {
         $name = 'proposal_' . date('Y-m-d i:h:s');
-        $data = Excel::download(new ProposalExport(), $name . '.xlsx');  ob_end_clean();
+        $data = Excel::download(new ProposalExport(), $name . '.xlsx');  
+        //ob_end_clean();
 
         return $data;
     }
